@@ -232,3 +232,5 @@ System.out.println("Loop encerrado.");
 ---
 
 Esses exemplos mostram como `break` e `continue` podem ser usados para controlar o fluxo de execução dentro de um loop `for` em Java.
+
+---
