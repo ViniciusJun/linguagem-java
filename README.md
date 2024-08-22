@@ -7,7 +7,7 @@ Bem-vindo ao Repositório de Estudo de Java Básico! Este repositório foi criad
 
 Este repositório está organizado em várias seções, cada uma focada em um aspecto fundamental da programação em Java:
 
-1. [**Conceitos Básicos**](https://github.com/ViniciusJun/dio-trilha-java-basico/tree/main/conceitos-basicos): Introdução à linguagem Java, instalação do JDK, configuração do ambiente de desenvolvimento, e primeiros passos.
+1. [**Conceitos Básicos**](https://github.com/ViniciusJun/linguagem-java/blob/d0cb769c5446e1cd4c4bb08a7fd4081abba21ef2/conceitos-basicos-java/Conceitos-Basicos.md): Introdução à linguagem Java, instalação do JDK, configuração do ambiente de desenvolvimento, e primeiros passos.
 2. [**Sintaxe Java**](https://github.com/ViniciusJun/dio-trilha-java-basico/blob/main/sintaxe-java/README.md): Explicação detalhada sobre os tipos de dados primitivos em Java, operadores, métodos, escopo, palavras reservadas, documentação e terminal.
 
 
