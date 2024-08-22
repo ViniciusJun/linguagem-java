@@ -6,9 +6,9 @@ Aqui estão os principais tipos de controle de fluxo em Java:
 
 ### Classificação:&#x20;
 
-* **Estruturas condicionais:** if, else, else if, switch&#x20;
-* **Estruturas de repetição:** for, while, do-while
-*   **Estruturas de exceções:** try-catch-finally, throw
+* [**Estruturas condicionais:**](https://github.com/ViniciusJun/linguagem-java/blob/e0e5be0c7ac782733d23d7f07a4928d4749f840e/java-basico/Controle-de-Fluxo/EstruturasCondicionais.md) if, else, else if, switch&#x20;
+* [**Estruturas de repetição:**](https://github.com/ViniciusJun/linguagem-java/blob/e0e5be0c7ac782733d23d7f07a4928d4749f840e/java-basico/Controle-de-Fluxo/EsctruturasRepeticao.md) for, while, do-while
+* [**Estruturas de exceções:**](https://github.com/ViniciusJun/linguagem-java/blob/e0e5be0c7ac782733d23d7f07a4928d4749f840e/java-basico/Controle-de-Fluxo/EstruturasExercoes.md) try-catch-finally, throw
 
     &#x20;
 
