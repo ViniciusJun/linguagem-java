@@ -1,131 +1,80 @@
-# Tipos Primitivos em Java
 
-Em Java, os tipos primitivos são os blocos básicos de construção para a manipulação de dados. Esses tipos não são objetos e representam valores simples. Existem oito tipos primitivos em Java, cada um com um propósito específico. Eles são classificados em quatro categorias principais: tipos numéricos inteiros, tipos numéricos de ponto flutuante, caracteres e booleanos.
+Em Java, a **sintaxe** se refere ao conjunto de regras que define a estrutura correta de um programa escrito nessa linguagem de programação. Assim como em uma língua falada ou escrita, onde as regras gramaticais ditam como as palavras e frases devem ser organizadas, a sintaxe de Java estabelece como os diferentes elementos do código devem ser organizados para que o compilador entenda e execute o programa corretamente.
 
-## Tipos Numéricos Inteiros
+### Elementos da Sintaxe em Java:
 
-1. **byte**: Usado para economizar espaço em grandes arrays, onde a economia de espaço realmente importa. É um tipo de 8 bits.
-2. **short**: Também usado para economizar espaço, como o `byte`, mas pode armazenar números maiores. É um tipo de 16 bits.
-3. **int**: O tipo numérico inteiro padrão para a maioria das operações. É um tipo de 32 bits.
-4. **long**: Usado quando um intervalo maior que o `int` é necessário. É um tipo de 64 bits.
+1. **Declaração de Classes e Métodos:**
+   - Em Java, o código é organizado em classes. Cada classe pode conter métodos e variáveis.
+   - A estrutura básica de uma classe é:
 
-## Tipos Numéricos de Ponto Flutuante
+     ```java
+     public class NomeDaClasse {
+         // variáveis e métodos
+     }
+     ```
+   - Um método é definido dentro de uma classe:
+     ```java
+     public tipoDeRetorno nomeDoMetodo(tipoParametro nomeParametro) {
+         // corpo do método
+     }
+     ```
 
-5. **float**: Usado para economizar memória em grandes arrays de números de ponto flutuante. É um tipo de 32 bits.
-6. **double**: O tipo padrão para números de ponto flutuante. É um tipo de 64 bits.
+2. **Ponto e Vírgula (`;`):**
+   - Cada declaração em Java deve terminar com um ponto e vírgula.
+     ```java
+     int x = 10;
+     ```
 
-## Caracter
+3. **Chaves (`{}`):**
+   - As chaves delimitam blocos de código, como o corpo de uma classe, método ou controle de fluxo (ex.: loops, condicionais).
+     ```java
+     if (condicao) {
+         // bloco de código
+     }
+     ```
 
-7. **char**: Usado para armazenar qualquer caractere único. É um tipo de 16 bits que representa um único caractere Unicode.
+4. **Parênteses (`()`):**
+   - São usados para passar parâmetros para métodos e definir condições em estruturas de controle como `if`, `for`, `while`.
+     ```java
+     public void exemploMetodo(int a, int b) {
+         // código
+     }
+     
+     if (a > b) {
+         // código
+     }
+     ```
 
-## Booleano
+5. **Comentários:**
+   - Comentários são trechos de texto no código que não são executados e são usados para descrever o que o código faz.
+   - Comentários de uma linha: `// Comentário`
+   - Comentários de múltiplas linhas:
+     ```java
+     /*
+      * Este é um comentário
+      * de múltiplas linhas.
+      */
+     ```
 
-8. **boolean**: Usado para armazenar valores verdadeiros ou falsos. Pode ter apenas dois valores: `true` ou `false`.
+6. **Case Sensitivity:**
+   - Java diferencia maiúsculas de minúsculas. `NomeDaClasse` e `nomedaclasse` são diferentes.
 
-## Tabela dos Tipos Primitivos
+7. **Palavras-chave:**
+   - Java possui palavras reservadas como `class`, `public`, `void`, `if`, `else`, que têm significados específicos e não podem ser usadas como nomes de variáveis ou métodos.
 
-| Tipo   | Tamanho (bits) | Valor Mínimo              | Valor Máximo               | Valor Padrão |
-|--------|----------------|---------------------------|----------------------------|--------------|
-| byte   | 8   (1 bytes)  | -128                      | 127                        | 0            |
-| short  | 16  (2 bytes)  | -32.768                   | 32.767                     | 0            |
-| int    | 32  (4 bytes)  | -2.147.483.68             | 2.147.483.647              | 0            |
-| long   | 64  (8 bytes)  | -9.223.372.036.854.775.808| 9.223.372.036.854.775.807  | 0L           |
-| float  | 32  (4 bytes)  | 1.4e-45 (aprox.)          | 3.4028235e+38 (aprox.)     | 0.0f         |
-| double | 64  (8 bytes)  | 4.9e-324 (aprox.)         | 1.7976931348623157e+308    | 0.0d         |
-| char   | 16  (2 bytes)  | '\u0000' (ou 0)           | '\uffff' (ou 65.535)       | '\u0000'     |
-| boolean| 1 (não def.)   | false                     | true                       | false        |
-
-Esses tipos primitivos são essenciais para a programação em Java, fornecendo uma base eficiente e direta para a manipulação de dados simples.
-
-# Declaração de Variáveis
-
-Uma variável é uma identificação de um espaço na memória utilizado pelo programa. Seguindo as convenções das linguagens de programação, toda variável é composta por: tipo de dado + identificação + valor atribuído.
-
-A estrutura padrão para declarar uma variável é:
+### Exemplo Completo:
 
 ```java
-<Tipo> <nomeVariavel> <atribuicaoDeValorOpcional>
-```
-
-Exemplos:
-
-```java
-int idade; // Tipo "int", nome "idade", sem valor atribuído.
-int anoFabricacao = 2021; // Tipo "int", nome "anoFabricacao", valor 2021.
-double salarioMinimo = 2500.00; // Tipo "double", nome "salarioMinimo", valor 2500.00.
-```
-
-## Peculiaridades com Tipos Específicos
-
-Alguns tipos de dados têm particularidades. Veja o exemplo abaixo:
-
-```java
-public class TipoDados {
+public class Exemplo {
     public static void main(String[] args) {
-        byte idade = 123;
-        short ano = 2021;
-        int cep = 21070333; // Se começar com zero, talvez precise ser de outro tipo
-        long cpf = 98765432109L; // Se começar com zero, talvez precise ser de outro tipo
-        float pi = 3.14F;
-        double salario = 1275.33;
+        int numero = 10; // Declaração de uma variável do tipo inteiro
+        if (numero > 5) { // Verificação da condição
+            System.out.println("O número é maior que 5"); // Impressão na tela
+        }
     }
 }
 ```
 
-Observe que o tipo `long` precisa terminar com `L`, o tipo `float` precisa terminar com `F`, e algumas situações podem exigir alterações nos tipos de dados convencionais.
+Nesse exemplo, temos uma classe chamada `Exemplo` que contém um método `main`, onde uma variável `numero` é declarada, e uma condição `if` verifica se o número é maior que 5. Se for, imprime uma mensagem na tela.
 
-## Fortemente Tipado
-
-Java é uma linguagem fortemente tipada. Considere o exemplo abaixo:
-
-```java
-// TiposEVariaveis.java
-
-short numeroCurto = 1;
-int numeroNormal = numeroCurto;
-short numeroCurto2 = numeroNormal; // Isso não é permitido pelo Java.
-```
-
-Mesmo sabendo que `numeroNormal` cabe em um `short`, Java não permite tal conversão direta.
-
-## Variáveis e Constantes
-
-Uma variável é uma área de memória associada a um nome, que pode armazenar valores de um determinado tipo. Um tipo de dado define um conjunto de valores e operações. Java é uma linguagem fortemente tipada, diferentemente de linguagens como JavaScript, onde declarar o tipo da variável não é obrigatório.
-
-Em Java, utilizamos identificadores que representam uma referência a um valor em memória, e esta referência pode ser redirecionada para outro valor, daí o nome "variável".
-
-Constantes são valores que, uma vez declarados, não podem ser modificados. Em Java, utilizamos a palavra reservada `final` para declarar constantes. Por convenção, constantes são escritas em CAIXA ALTA.
-
-### Exemplo de Variáveis e Constantes
-
-```java
-public class ExemploVariavel {
-    public static void main(String[] args) {
-        /*
-         * Esta linha é considerada uma declaração de variável.
-         * Iniciamos a existência da variável numero com valor 5.
-         * Regra: tipo + nome + valor
-         */
-        int numero = 5;
-
-        /*
-         * Na linha abaixo, alteramos o valor da variável para 10.
-         * Observe que o tipo não é mais necessário, pois a variável já foi declarada anteriormente.
-         */
-        numero = 10;
-
-        System.out.print(numero);
-
-        /*
-         * Ao usar a palavra reservada final, você determina que esta variável
-         * jamais poderá obter outro valor.
-         * A linha 25 vai apresentar um erro de compilação, pois isso é considerado uma CONSTANTE na linguagem Java.
-         */
-        final double VALOR_DE_PI = 3.14;
-
-        VALOR_DE_PI = 3.15; // Esta linha vai apresentar erro de compilação!
-    }
-}
-```
-
-Para declarar uma variável como uma constante, utilizamos a palavra `final`. Por convenção, estas variáveis são escritas em CAIXA ALTA.
+A sintaxe correta é crucial para garantir que o código Java seja compilado e executado sem erros.
