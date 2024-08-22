@@ -1,5 +1,5 @@
 public class OperadoresAritmeticos {
-
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         //Aritméticos: O operador aritmético, é utilizado para realizar operações matemáticas entre valores numéricos, podendo se tornar ou não uma expressão mais complexa.
         double soma = 10.5 + 15.7;
