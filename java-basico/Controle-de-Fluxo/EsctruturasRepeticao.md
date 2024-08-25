@@ -331,3 +331,95 @@ while (true) {
 ---
 
 O `while` é uma estrutura de repetição poderosa em Java, especialmente útil quando as iterações dependem de uma condição que pode não ser previsível antecipadamente.
+
+---
+
+### Estrutura de Repetição `do-while` em Java
+
+A estrutura de repetição `do-while` em Java é similar ao `while`, mas com uma diferença importante: o bloco de código é executado pelo menos uma vez antes da condição ser testada. Isso ocorre porque a condição é verificada após a execução do bloco de código, e não antes.
+
+### Sintaxe do `do-while`
+
+```java
+do {
+    // Código a ser executado pelo menos uma vez
+} while (condição);
+```
+
+- **condição**: Uma expressão booleana que é avaliada após cada iteração. Se a condição for verdadeira, o loop continua; se for falsa, o loop é encerrado.
+
+### Exemplo 1: Loop Simples com `do-while`
+
+```java
+int contador = 0;
+
+do {
+    System.out.println("Contador: " + contador);
+    contador++;
+} while (contador < 5);
+```
+
+**Explicação:**
+- O loop `do-while` começa executando o bloco de código, imprimindo o valor de `contador` e incrementando-o em 1.
+- Após a execução do bloco, a condição `contador < 5` é verificada.
+- O loop continua enquanto `contador` for menor que 5.
+- Mesmo se a condição fosse falsa desde o início, o bloco de código seria executado pelo menos uma vez.
+
+### Exemplo 2: Validação de Entrada com `do-while`
+
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+int numero;
+
+do {
+    System.out.print("Digite um número positivo: ");
+    numero = scanner.nextInt();
+
+    if (numero <= 0) {
+        System.out.println("Número inválido. Tente novamente.");
+    }
+} while (numero <= 0);
+
+System.out.println("Você digitou: " + numero);
+```
+
+**Explicação:**
+- Neste exemplo, o usuário é solicitado a inserir um número positivo.
+- O loop `do-while` garante que o bloco de código seja executado pelo menos uma vez, mesmo que o número digitado seja negativo ou zero.
+- Se o número for inválido, o usuário é solicitado a tentar novamente até que um número positivo seja inserido.
+
+### Diferença Principal entre `while` e `do-while`
+
+- **`while`**: A condição é verificada antes de o bloco de código ser executado. Se a condição for falsa desde o início, o bloco de código pode nunca ser executado.
+- **`do-while`**: O bloco de código é executado pelo menos uma vez, pois a condição é verificada após a execução do bloco.
+
+### Exemplo 3: Comparação entre `while` e `do-while`
+
+```java
+int contadorWhile = 10;
+
+while (contadorWhile < 5) {
+    System.out.println("Este código nunca será executado.");
+}
+
+int contadorDoWhile = 10;
+
+do {
+    System.out.println("Este código será executado uma vez.");
+} while (contadorDoWhile < 5);
+```
+
+**Explicação:**
+- No primeiro caso, o loop `while` não executa o bloco de código porque a condição é falsa desde o início.
+- No segundo caso, o loop `do-while` executa o bloco de código uma vez, mesmo que a condição seja falsa.
+
+### Considerações sobre o Uso do `do-while`
+
+- **Uso Típico**: O `do-while` é particularmente útil em situações onde você deseja garantir que um bloco de código seja executado pelo menos uma vez, como na validação de entrada do usuário.
+- **Legibilidade**: O `do-while` pode tornar o código mais legível em cenários onde a execução do bloco pelo menos uma vez é essencial.
+
+---
+
+A estrutura `do-while` em Java é uma ferramenta valiosa para situações onde é necessário garantir a execução de um bloco de código antes de testar uma condição.
