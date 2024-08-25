@@ -234,3 +234,100 @@ System.out.println("Loop encerrado.");
 Esses exemplos mostram como `break` e `continue` podem ser usados para controlar o fluxo de execução dentro de um loop `for` em Java.
 
 ---
+
+### Estrutura de Repetição `while` em Java
+
+A estrutura de repetição `while` em Java é usada para executar repetidamente um bloco de código enquanto uma determinada condição for verdadeira. Ao contrário do `for`, o `while` é mais adequado para situações em que o número de iterações não é conhecido antecipadamente.
+
+### Sintaxe do `while`
+
+```java
+while (condição) {
+    // Código a ser executado enquanto a condição for verdadeira
+}
+```
+
+- **condição**: Uma expressão booleana que é avaliada antes de cada iteração. Se a condição for verdadeira, o loop continua; se for falsa, o loop é encerrado.
+
+### Exemplo 1: Loop Simples com `while`
+
+```java
+int contador = 0;
+
+while (contador < 5) {
+    System.out.println("Contador: " + contador);
+    contador++;
+}
+```
+
+**Explicação:**
+- O loop `while` começa com `contador` igual a 0.
+- Enquanto `contador` for menor que 5, o bloco de código dentro do loop é executado.
+- A cada iteração, `contador` é incrementado em 1 (`contador++`).
+- O loop imprime os valores de 0 a 4, e depois é encerrado.
+
+### Exemplo 2: Usando `while` para Validar Entrada do Usuário
+
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+int numero;
+
+System.out.print("Digite um número positivo: ");
+numero = scanner.nextInt();
+
+while (numero <= 0) {
+    System.out.println("Número inválido. Tente novamente.");
+    System.out.print("Digite um número positivo: ");
+    numero = scanner.nextInt();
+}
+
+System.out.println("Você digitou: " + numero);
+```
+
+**Explicação:**
+- O loop `while` continua pedindo ao usuário para digitar um número positivo até que um número maior que 0 seja inserido.
+- Se o usuário inserir um número negativo ou zero, o loop continua pedindo uma nova entrada.
+
+### Exemplo 3: Loop Infinito com `while`
+
+Um loop `while` pode se tornar infinito se a condição nunca se tornar falsa. Isso pode ser útil em certas situações, como servidores que precisam rodar indefinidamente, mas geralmente deve ser evitado, pois pode causar o travamento do programa.
+
+```java
+while (true) {
+    System.out.println("Este é um loop infinito!");
+    // Normalmente há uma condição de saída dentro do loop para quebrar o loop
+}
+```
+
+**Explicação:**
+- O `while (true)` cria um loop infinito porque a condição `true` nunca será falsa.
+- Para interromper um loop infinito, geralmente usamos uma instrução `break` dentro do loop com base em alguma condição.
+
+### Exemplo 4: Usando `break` em um Loop `while`
+
+```java
+int contador = 0;
+
+while (true) {
+    if (contador == 5) {
+        break; // Interrompe o loop quando contador for igual a 5
+    }
+    System.out.println("Contador: " + contador);
+    contador++;
+}
+```
+
+**Explicação:**
+- Este loop `while` é configurado como um loop infinito (`while (true)`).
+- O loop é interrompido usando a instrução `break` quando `contador` atinge 5.
+
+### Considerações sobre o Uso do `while`
+
+- **Condição de Saída**: Sempre certifique-se de que a condição do `while` possa se tornar falsa em algum ponto, para evitar loops infinitos acidentais.
+- **Aplicação**: O `while` é ideal para situações em que você não sabe o número exato de iterações necessárias, como na validação de entrada do usuário ou na leitura de dados até o final de um arquivo.
+
+---
+
+O `while` é uma estrutura de repetição poderosa em Java, especialmente útil quando as iterações dependem de uma condição que pode não ser previsível antecipadamente.
